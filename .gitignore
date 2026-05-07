@@ -1,0 +1,15 @@
+# IDE
+.idea/
+*.iml
+
+# OS
+.DS_Store
+
+# Java / Maven / Gradle
+target/
+build/
+.gradle/
+
+# Environment variables
+.env
+application-local.properties
