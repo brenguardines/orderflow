@@ -107,3 +107,25 @@ JWT will be used for authentication.
 JWT allows stateless authentication and is commonly used in REST APIs.
 
 Role-based access control will be added to restrict operations according to user permissions.
+
+---
+
+## Database Naming Convention
+
+The database uses snake_case for table and column names.
+
+### Reason
+
+Snake case is commonly used in relational databases and keeps naming consistent between tables, columns and SQL queries.
+
+---
+
+## Soft Delete for Products
+
+Products will include an `active` field instead of being physically deleted from the database.
+
+### Reason
+
+This prevents losing historical information when a product was used in previous orders.
+
+For example, if a product is no longer available, old orders should still keep a reference to it.
