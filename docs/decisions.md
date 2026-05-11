@@ -129,3 +129,27 @@ Products will include an `active` field instead of being physically deleted from
 This prevents losing historical information when a product was used in previous orders.
 
 For example, if a product is no longer available, old orders should still keep a reference to it.
+
+---
+
+## API and Database Naming Conventions
+
+The API uses camelCase for request and response fields, while the database uses snake_case for table and column names.
+
+### Reason
+
+camelCase is commonly used in Java DTOs and JSON APIs, while snake_case is commonly used in relational database schemas.
+
+This keeps each layer aligned with its usual conventions while maintaining clear mapping between API contracts and database fields.
+
+---
+
+## Consistent API Error Format
+
+The API will use a consistent error response format for validation errors, business rule violations and unexpected errors.
+
+### Reason
+
+A consistent error format improves API usability and makes it easier for clients to handle errors.
+
+It also makes debugging and logging more predictable.
